@@ -1,0 +1,18 @@
+a {
+    font-size: 50px;
+    color: navy;
+    text-decoration: none;
+}
+
+
+
+@keyframes rainboy {
+    0%   {background: red;}
+    25%  {background: green;}
+    50%  {background: yellow;}
+    75%  {background: blue;}
+    100% {background: orange;}
+}
+body {
+    background: lightblue;
+  }

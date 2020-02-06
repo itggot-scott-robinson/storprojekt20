@@ -1,0 +1,20 @@
+h1 Välkommen till dina dokument #{session[:username]}
+
+h2 Skapa nytt dökument
+form action="/lists/create_list" method="post"
+    input type="text" name="title" placeholder="Ny todo"
+    input type="submit" value="Skapa"
+
+h2 Dina dökument
+
+
+- if docs != nil
+    ul
+        - docs.each do |el|
+            li #{el["Title"]} 
+            form action="/lists/#{el["ID"]}/update" method="post"
+                input type="text" name="update" placeholder="Uppdatterra"
+                input type="submit" value="Update" 
+
+            form action="/lists/#{el["ID"]}/delete" method="post"
+                input type="submit" value="delet dis"
