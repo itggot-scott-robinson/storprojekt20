@@ -106,7 +106,7 @@ post('/lists/:id/update') do
     db = connect_to_db("db/databas.db")
     update=params["update"]
     list_id = params[:id].to_i
-    db.execute('UPDATE Doc SET doc_name = ? WHERE ID=? ', update, list_id)
+    db.execute('UPDATE Doc SET doc_name = ? WHERE doc_id=? ', update, list_id)
     redirect('/lists/index')
 end
 
